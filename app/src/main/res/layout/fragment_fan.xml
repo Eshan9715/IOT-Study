@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:circular="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fan">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            circular:cardCornerRadius="15dp"
+            android:layout_margin="10dp"
+            android:elevation="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/yellow">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginVertical="15dp"
+                    android:src="@drawable/fan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginVertical="15dp"
+                    android:layout_weight="3"
+                    android:text="Fan"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="left"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginVertical="15dp"
+                    android:layout_weight="3"
+                    android:text="Toggle this button to fan on"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_fan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="15dp"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            circular:cardCornerRadius="15dp"
+            android:layout_margin="10dp"
+            android:elevation="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:background="@color/l_green">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginVertical="15dp"
+                    android:src="@drawable/fan" />
+
+                <TextView
+                    android:id="@+id/top1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginVertical="15dp"
+                    android:layout_weight="3"
+                    android:text="Fan Speed"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/subtp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/top1"
+                    android:layout_gravity="left"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="3"
+                    android:text="Change the fan speed from slider"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:id="@+id/txt_speed"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@drawable/circle"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card1"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/subtp1"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="15dp"
+                    circular:cardCornerRadius="13dp">
+
+                    <SeekBar
+                        android:id="@+id/seek_speed"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_weight="3"
+                        android:max="255"
+                        android:min="100"
+                        android:progress="5"
+                        android:scaleX="2"
+                        android:scaleY="2" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            circular:cardCornerRadius="15dp"
+            android:layout_margin="10dp"
+            android:elevation="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_red">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginVertical="10dp"
+                    android:src="@drawable/temp" />
+
+                <TextView
+                    android:id="@+id/temp_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginHorizontal="55dp"
+                    android:layout_marginVertical="15dp"
+                    android:text="Room Temperature"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/th2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/temp_head"
+                    android:layout_gravity="left"
+                    android:layout_marginHorizontal="60dp"
+                    android:text="Show room temperature"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/room_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/th2"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="center"
+                    android:text="70.83 C"
+                    android:textColor="@color/black"
+                    android:textSize="28dp"
+                    android:textStyle="normal" />
+
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            circular:cardCornerRadius="15dp"
+            android:layout_margin="10dp"
+            android:elevation="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/y_blue">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginVertical="10dp"
+                    android:src="@drawable/temp" />
+
+                <TextView
+                    android:id="@+id/temp_head1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginHorizontal="55dp"
+                    android:layout_marginVertical="15dp"
+                    android:text="Humidity"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/thh2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/temp_head1"
+                    android:layout_gravity="left"
+                    android:layout_marginHorizontal="60dp"
+                    android:text="Show room humidity"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/room_humid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/thh2"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="center"
+                    android:text="70.83"
+                    android:textColor="@color/black"
+                    android:textSize="28dp"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="480dp"-->
+<!--            circular:cardCornerRadius="15dp"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:elevation="20dp">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="top"-->
+<!--                android:background="@color/light_red">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_marginVertical="15dp"-->
+<!--                    android:src="@drawable/fan" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/top2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="left"-->
+<!--                    android:layout_marginHorizontal="60dp"-->
+<!--                    android:layout_marginVertical="15dp"-->
+<!--                    android:layout_weight="3"-->
+<!--                    android:text="Fan Rotation"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="22dp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/subtp2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/top2"-->
+<!--                    android:layout_gravity="left"-->
+<!--                    android:layout_marginHorizontal="60dp"-->
+<!--                    android:layout_marginVertical="5dp"-->
+<!--                    android:layout_weight="3"-->
+<!--                    android:text="Change rotation angle from slider"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="15dp"-->
+<!--                    android:textStyle="normal" />-->
+
+<!--                <androidx.appcompat.widget.SwitchCompat-->
+<!--                    android:id="@+id/switch_rot"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginHorizontal="30dp"-->
+<!--                    android:layout_marginVertical="15dp"-->
+<!--                    android:thumb="@drawable/thumb"-->
+<!--                    app:showText="true"-->
+<!--                    app:track="@drawable/track" />-->
+
+<!--                <hiennguyen.me.circleseekbar.CircleSeekBar-->
+<!--                    android:id="@+id/circular"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    android:layout_below="@id/subtp2"-->
+<!--                    android:layout_marginVertical="5dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:padding="64dp"-->
+<!--                    app:csb_arcColor="@color/blueSp"-->
+<!--                    app:csb_arcWidth="6dp"-->
+<!--                    app:csb_max="255"-->
+<!--                    app:csb_min="0"-->
+<!--                    app:csb_progress="100"-->
+<!--                    app:csb_progressColor="#00aad4"-->
+<!--                    app:csb_progressWidth="12dp"-->
+<!--                    app:csb_step="5"-->
+<!--                    app:csb_textColor="@color/color_text"-->
+<!--                    app:csb_textSize="36sp"-->
+<!--                    app:csb_thumbDrawable="@drawable/ic_circle_seekbar"-->
+<!--                    app:csb_thumbSize="36dp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_set_rotate"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/circular"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginHorizontal="120dp"-->
+<!--                    android:layout_marginVertical="10dp"-->
+<!--                    android:backgroundTint="@color/blueSp"-->
+<!--                    android:text="set "-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="14dp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </RelativeLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+    </LinearLayout>
+
+</ScrollView>
