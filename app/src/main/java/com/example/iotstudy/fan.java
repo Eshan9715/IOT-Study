@@ -1,4 +1,4 @@
-package com.example.SmartStudy;
+package com.example.iotstudy;
 
 import static android.content.ContentValues.TAG;
 
@@ -22,12 +22,11 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 import java.io.UnsupportedEncodingException;
 
-import hiennguyen.me.circleseekbar.CircleSeekBar;
 
 
 public class fan extends Fragment {
 
-    CircleSeekBar circleSeekBar;
+    //CircleSeekBar circleSeekBar;
     View v;
     int r, g, b, pixel;
     SeekBar speedBar;

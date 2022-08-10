@@ -1,4 +1,4 @@
-package com.example.SmartStudy;
+package com.example.iotstudy;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.SmartStudy;
+package com.example.iotstudy;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;

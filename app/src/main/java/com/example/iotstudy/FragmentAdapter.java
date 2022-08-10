@@ -1,4 +1,4 @@
-package com.example.SmartStudy;
+package com.example.iotstudy;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

@@ -1,4 +1,4 @@
-package com.example.SmartStudy;
+package com.example.iotstudy;
 
 import static android.content.ContentValues.TAG;
 
